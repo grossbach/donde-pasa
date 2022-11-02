@@ -1,9 +1,9 @@
 ---
+title-block-banner: "#FF1493"
 title: "¿Donde Passarotto?"
 author: "Michael Großbach"
 date: last-modified
 date-format: "YYYY-MM-DD"
-abstract: "The abstract appears here."
 format: 
   html:
     toc: true
@@ -24,21 +24,26 @@ editor_options:
 
 ## The Problem
 
-Subjects were asked to draw a line from point A to point B. Since they usually did not set off from A exactly, but rather from somewhere in its vicinity, the question arose how to handle this uncertainty when attempting to quantify the complexity of the line between A and B.
+Subjects were asked to repeatedly draw a line from point A to point B. Since they usually did not set off from A exactly, but rather from somewhere in its vicinity, the question arose how to handle these deviations when attempting to quantify the complexity of the lines between A and B.
 
-To estimate a distribution of the actual starting points across all trials in a subject, the mean and standard deviation of the starting point y-coordinates were used to calculate the coefficient of variation (CoV; [wikipedia](https://en.wikipedia.org/wiki/Coefficient_of_variation)). The y-coordinates of the digitizing tablet run from 0 to **XXXX**, and the the starting point A is in the middle of the y-axis. 
+To estimate a distribution of the actual starting points across all trials in a subject, the mean and standard deviation of the starting point y-coordinates were used to calculate the coefficient of variation (CoV; [wikipedia](https://en.wikipedia.org/wiki/Coefficient_of_variation)). The y-coordinates of the digitizing tablet ran from 0 to **16XX**, and the starting point A is in the middle of the y-axis. 
 
 ## Possible Solutions
 
-### 'A' is Set to Zero
+### 'A' is Set to Zero {#sec-AisZero}
 
 The most natural or intuitive solution would be to set A to zero, so that starting points of actual trajectories above A have positive y-coordinates, and ones below A are negative. Subjects who, for whatever reason, tend to start above (or below) A therefore would have a positive (negative) mean of starting point y-coordinates.
 
-Systematic deviation of actual starting points from the 'true' starting point A implies a systematic limit for exploration on one side of the middle line, but since the systematic deviations from A are rather small compared to the range of the y-axis, this should be negligible. 
+Systematic deviation of actual starting points from the 'true' starting point A implies a systematic limit for exploration on one side of the middle line, but since the systematic deviations from A were rather small compared to the range of the y-axis (at least from what I have seen), this may be deemed negligible. 
 
-### The Median of All Starting Points is Set to Zero
+### Mean Centering {#sec-MeanCentering}
 
+Setting all starting point y-coordinates to zero, or mean centering, 'makes' all trajectories start at A and avoids artificially inflated averages in subjects who systematically deviate from A (@sec-AisZero). 
 
-### All Starting Points Are Set to Zero
+### Median Centering
 
-### 
+Setting all starting point y-coordinates to zero by median centering (as opposed to mean centering, as in @sec-MeanCentering) reduces the influence of outliers on the distribution center, and might therefore be a better alternative.
+
+## Conclusion
+
+In light of the above musings the most reasonable approach seems to be to use median centering. Whether CoV ($s/\bar{x}$) is the best way to describe the distribution of y-coordinates across trials should be discussed. 
