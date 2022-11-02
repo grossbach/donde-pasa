@@ -1,15 +1,44 @@
 ---
 title: "¿Donde Passarotto?"
 author: "Michael Großbach"
-format: html
+date: last-modified
+date-format: "YYYY-MM-DD"
+abstract: "The abstract appears here."
+format: 
+  html:
+    toc: true
+    toc_float: true
+    toc-depth: 3
+    toc-location: "left"
+cap-location: margin
+reference-location: block
+citations-hover: true
+echo: true
+code-fold: true
+number-sections: true
+bibliography: /home/grossbach/files/_sonstiges/000literaturdb.bib
+csl: /home/grossbach/files/_sonstiges/frontiers-in-neuroscience.csl
+editor_options: 
+  chunk_output_type: console
 ---
 
 ## The Problem
 
+Subjects were asked to draw a line from point A to point B. Since they usually did not set off from A exactly, but rather from somewhere in its vicinity, the question arose how to handle this uncertainty when attempting to quantify the complexity of the line between A and B.
+
+To estimate a distribution of the actual starting points across all trials in a subject, the mean and standard deviation of the starting point y-coordinates were used to calculate the coefficient of variation (CoV; [wikipedia](https://en.wikipedia.org/wiki/Coefficient_of_variation)). The y-coordinates of the digitizing tablet run from 0 to **XXXX**, and the the starting point A is in the middle of the y-axis. 
+
 ## Possible Solutions
 
-### 'A' is Zero
+### 'A' is Set to Zero
 
-### The Median of All Starting Points is Zero
+The most natural or intuitive solution would be to set A to zero, so that starting points of actual trajectories above A have positive y-coordinates, and ones below A are negative. Subjects who, for whatever reason, tend to start above (or below) A therefore would have a positive (negative) mean of starting point y-coordinates.
+
+Systematic deviation of actual starting points from the 'true' starting point A implies a systematic limit for exploration on one side of the middle line, but since the systematic deviations from A are rather small compared to the range of the y-axis, this should be negligible. 
+
+### The Median of All Starting Points is Set to Zero
+
 
 ### All Starting Points Are Set to Zero
+
+### 
