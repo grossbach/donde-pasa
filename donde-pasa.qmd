@@ -1,0 +1,15 @@
+---
+title: "¿Donde Passarotto?"
+author: "Michael Großbach"
+format: html
+---
+
+## The Problem
+
+## Possible Solutions
+
+### 'A' is Zero
+
+### The Median of All Starting Points is Zero
+
+### All Starting Points Are Set to Zero
