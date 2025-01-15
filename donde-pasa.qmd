@@ -17,7 +17,7 @@ echo: true
 code-fold: true
 number-sections: true
 bibliography: /home/grossbach/files/_sonstiges/000literaturdb.bib
-csl: /home/grossbach/files/_sonstiges/frontiers-in-neuroscience.csl
+csl: /home/grossbach/files/devel/r/templates/frontiers-in-neuroscience.csl
 editor_options: 
   chunk_output_type: console
 ---
